@@ -24,3 +24,9 @@
   top: -2rem;
   z-index: 2;
 }
+
+/** Listing Item */
+.listing__location {
+  left: 1.5rem;
+  bottom: 1rem;
+}
