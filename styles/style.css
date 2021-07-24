@@ -1,4 +1,8 @@
 /* Utility */
+.rounded--md {
+  border-radius: 1rem;
+}
+
 .rounded--lg {
   border-radius: 2rem;
 }
