@@ -1,3 +1,7 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Utility */
 .transition {
   transition: 0.25s all ease;
@@ -31,6 +35,33 @@
   background-color: #000;
 }
 
+.bg-gray {
+  background-color: #e8e8e8;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(0deg, rgba(34,195,178,1) 0%, rgba(45,184,253,1) 100%);
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(0deg, rgba(232,232,232,1) 0%, rgba(221,221,221,1) 58%, rgba(221,221,221,1) 100%);
+}
+
+/** Buttons */
+.btn--orange {
+  color: #fff;
+  background-color: #ff8d00;
+  border-color: #ff8d00;
+}
+
+.btn--orange:hover,
+.btn--orange:active,
+.btn--orange:focus {
+  color: #fff;
+  background-color: #c7740d;
+  border-color: #c7740d;
+}
+
 /** Gloabl Elements*/
 .app-wrapper {
   padding-left: 5rem;
@@ -58,6 +89,26 @@
 .app-wrapper__filter-bar {
   top: -2rem;
   z-index: 3;
+}
+
+/** Forms */
+.input--w-icon {
+  padding-left: 2em;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 1rem;
+}
+
+.input--location {
+  background-image: url('../images/icons/map-marker.svg');
+}
+
+.input--date {
+  background-image: url('../images/icons/calendar.png');
+}
+
+.input--person {
+  background-image: url('../images/icons/person.svg');
 }
 
 /** Hero */
@@ -90,7 +141,7 @@
   color: #333;
   font-weight: bold;
   background-color: transparent;
-  border-bottom-color: #198754;
+  border-bottom-color: #ff8d00;
 }
 
 /** Listing Item */

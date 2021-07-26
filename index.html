@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
     <!--Slick Slider-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Font Awesome-->
@@ -13,10 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Travel Website App</title>
   </head>
-  <body class="bg-light bg-gradient h-100">
-    <section class="pt-5">
+  <body class="bg-gray h-100">
+    <section class="pt-5 mt-5">
       <div class="container">
-        <div class="app-wrapper bg-primary rounded--lg shadow mb-5 position-relative">
+        <div class="app-wrapper bg-blue-gradient rounded--lg shadow mb-5 position-relative">
           <nav class="app-wrapper__nav py-3 bg-dark text-center rounded--bottom-left rounded--top-left">
             <ul class="m-0 p-0 list-unstyled">
               <li>
@@ -59,14 +63,14 @@
             <div class="app-wrapper__filter-bar position-relative me-3 border shadow bg-white rounded--md overflow-hidden p-1">
               <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
-                  <input class="form-control border-0 py-3 pl-2 mb-0" type="text" placeholder="Where are you going?" />
+                  <input class="form-control input--w-icon input--location border-0 py-3 mb-0 input--location position-relative" type="text" placeholder="Where are you going?" />
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                  <input class="form-control border-0 py-3 mb-0 w-50 float-start datepicker" type="text" placeholder="Check In" />
-                  <input class="form-control border-0 py-3 mb-0 w-50 float-end datepicker" type="text" placeholder="Check out" />
+                  <input class="form-control input--w-icon input--date border-0 py-3 mb-0 w-50 float-start datepicker" type="text" placeholder="Check In" />
+                  <input class="form-control input--w-icon input--date border-0 py-3 mb-0 w-50 float-end datepicker" type="text" placeholder="Check out" />
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                  <select class="form-control border-0 py-3 mb-0 w-50 float-start">
+                  <select class="form-control input--w-icon input--person border-0 py-3 mb-0 w-50 float-start">
                     <option>1 Adult</option>
                     <option>2 Adults</option>
                     <option>3 Adults</option>
@@ -93,7 +97,7 @@
                   </select>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                  <button type="submit" class="btn btn-success btn-block w-100 py-3 rounded--md fw-bold">See Destinations</button>
+                  <button type="submit" class="btn btn--orange btn-block w-100 py-3 rounded--md">See Destinations</button>
                 </div>
               </div>
             </div>
