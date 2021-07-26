@@ -3,6 +3,19 @@
   transition: 0.25s all ease;
 }
 
+.rounded--bottom-right {
+  border-bottom-right-radius: 2rem;
+}
+
+.rounded--bottom-left {
+  border-bottom-left-radius: 2rem;
+}
+
+.rounded--top-left {
+  border-top-left-radius: 2rem;
+}
+
+
 .rounded--md {
   border-radius: 1rem;
 }
@@ -46,6 +59,19 @@
 .app-wrapper__filter-bar {
   top: -2rem;
   z-index: 3;
+}
+
+/** Hero */
+.hero {
+  padding-top: 5rem;
+}
+
+.hero__img {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  bottom: 0;
+  right: 0;
 }
 
 /** Listing Tabs */
