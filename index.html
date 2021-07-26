@@ -9,28 +9,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--jQuery UI for Datepicker-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Travel Website App</title>
   </head>
   <body class="bg-light bg-gradient h-100">
     <section class="pt-5">
       <div class="container">
         <div class="app-wrapper bg-primary rounded--lg shadow mb-5 position-relative overflow-hidden">
-          <nav class="app-wrapper__nav p-3 bg-dark text-center">
+          <nav class="app-wrapper__nav py-3 bg-dark text-center">
             <ul class="m-0 p-0 list-unstyled">
               <li>
-                <a href="#" title="Home" class="app-wrapper__nav__item text-white text-decoration-none">Home</a>
+                <a href="#Home" title="Home" class="app-wrapper__nav__item text-white text-decoration-none py-4 d-block transition" data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
+                  <i class="fas fa-home"></i>
+                </a>
               </li>
               <li>
-                <a href="#" title="Map" class="app-wrapper__nav__item text-white text-decoration-none">Map</a>
+                <a href="#Map" title="Map" class="app-wrapper__nav__item text-white text-decoration-none py-4 d-block transition" data-bs-toggle="tooltip" data-bs-placement="right" title="Map of Listing">
+                  <i class="far fa-map"></i>
+                </a>
               </li>
               <li>
-                <a href="#" title="Favorites" class="app-wrapper__nav__item text-white text-decoration-none">Favorites</a>
+                <a href="#Favorites" title="Favorites" class="app-wrapper__nav__item text-white text-decoration-none py-4 d-block transition" data-bs-toggle="tooltip" data-bs-placement="right" title="View Your Favorites">
+                  <i class="far fa-heart"></i>
+                </a>
               </li>
               <li>
-                <a href="#" title="Favorites" class="app-wrapper__nav__item text-white text-decoration-none">Settings</a>
+                <a href="#Settings" title="Settings" class="app-wrapper__nav__item text-white text-decoration-none py-4 d-block transition" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings">
+                  <i class="far fa-cog"></i>
+                </a>
               </li>
               <li>
-                <a href="#" title="Account" class="app-wrapper__nav__item text-white text-decoration-none">Account</a>
+                <a href="#Account" title="Account" class="app-wrapper__nav__item text-white text-decoration-none py-4 d-block transition" data-bs-toggle="tooltip" data-bs-placement="right" title="Account">
+                  <i class="far fa-user"></i>
+                </a>
               </li>
             </ul>
           </nav>
@@ -52,7 +64,8 @@
                   <input class="form-control border-0 py-3 pl-2 mb-0" type="text" placeholder="Where are you going?" />
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
-                  <input class="form-control border-0 py-3 mb-0" type="datepicker" />
+                  <input class="form-control border-0 py-3 mb-0 w-50 float-start datepicker" type="text" placeholder="Check In" />
+                  <input class="form-control border-0 py-3 mb-0 w-50 float-end datepicker" type="text" placeholder="Check out" />
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
                   <select class="form-control border-0 py-3 mb-0 w-50 float-start">
@@ -90,70 +103,37 @@
             <div class="me-3 mt-1 mb-1">
               <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="pills-New-tab" data-bs-toggle="pill" data-bs-target="#pills-New" type="button" role="tab" aria-controls="pills-New" aria-selected="true">New</button>
+                  <button class="nav-link nav-link--pill active" id="pills-City-tab" data-bs-toggle="pill" data-bs-target="#pills-City" type="button" role="tab" aria-controls="pills-City" aria-selected="true">City</button>
                 </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-Popular-tab" data-bs-toggle="pill" data-bs-target="#pills-Popular" type="button" role="tab" aria-controls="pills-Popular" aria-selected="false">Popular</button>
+                <li class="nav-item ms-md-2" role="presentation">
+                  <button class="nav-link nav-link--pill" id="pills-Country-tab" data-bs-toggle="pill" data-bs-target="#pills-Country" type="button" role="tab" aria-controls="pills-Country" aria-selected="false">Country</button>
                 </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-Reccomendations-tab" data-bs-toggle="pill" data-bs-target="#pills-Reccomendations" type="button" role="tab" aria-controls="pills-Reccomendations" aria-selected="false">Reccomendations</button>
+                <li class="nav-item ms-md-2" role="presentation">
+                  <button class="nav-link nav-link--pill" id="pills-Adventure-tab" data-bs-toggle="pill" data-bs-target="#pills-Adventure" type="button" role="tab" aria-controls="pills-Adventure" aria-selected="false">Adventure</button>
                 </li>
               </ul>
               <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-New" role="tabpanel" aria-labelledby="pills-New-tab">
+                <div class="tab-pane fade show active" id="pills-City" role="tabpanel" aria-labelledby="pills-City-tab">
                   
                   <div class="js-listing-slider listing-slider">
 
-                    <div class="listing-slider__slide listing rounded--md bg-primary text-white px-4 pt-3 pb-5 mb-2 me-2 position-relative">
+                    <div class="listing-slider__slide listing overflow-hidden rounded--md bg-primary text-white px-4 pt-3 pb-5 mb-2 me-2 position-relative transition">
                       <h5 class="listing__title"><a href="#ListingUrl" class="stretched-link text-decoration-none text-white">Title</a></h5>
-                      <button class="listing__favorite listing__favorite--favorited border-0 bg-transparent appearance-none" type="button" title="Favorite"></button>
+                      <button class="listing__favorite listing__favorite--favorited border-0 bg-transparent appearance-none" type="button" title="Favorite this listing"></button>
                      <div class="listing__rating"><i class="fas fa-star"></i> 5.0</div>
                       <div class="listing__location w-100 position-absolute"><i class="fas fa-map-marker-alt"></i> Location</div>
+                      <img src="images/city.png" alt="Image of the Listing" class="listing__img" />
                     </div>
 
-                    <div class="listing-slider__slide rounded--md bg-primary text-white px-4 pt-3 pb-5 listing mb-2 me-2 position-relative">
-                      <h5 class="listing__title">Title</h5>
-                      <button class="listing__favorite border-0 bg-transparent appearance-none" type="button" title="Favorite"></button>
-                     <div class="listing__rating"><i class="fas fa-star"></i> 5.0</div>
-                      <div class="listing__location w-100 position-absolute"><i class="fas fa-map-marker-alt"></i> Location</div>
-                    </div>
-
-                    <div class="listing-slider__slide rounded--md bg-primary text-white px-4 pt-3 pb-5 listing mb-2 me-2 position-relative">
-                      <h5 class="listing__title">Title</h5>
-                      <button class="listing__favorite border-0 bg-transparent appearance-none" type="button" title="Favorite"></button>
-                     <div class="listing__rating"><i class="fas fa-star"></i> 5.0</div>
-                      <div class="listing__location w-100 position-absolute"><i class="fas fa-map-marker-alt"></i> Location</div>
-                    </div>
-
-                    <div class="listing-slider__slide rounded--md bg-primary text-white px-4 pt-3 pb-5 listing mb-2 me-2 position-relative">
-                      <h5 class="listing__title">Title</h5>
-                      <button class="listing__favorite border-0 bg-transparent appearance-none" type="button" title="Favorite"></button>
-                     <div class="listing__rating"><i class="fas fa-star"></i> 5.0</div>
-                      <div class="listing__location w-100 position-absolute"><i class="fas fa-map-marker-alt"></i> Location</div>
-                    </div>
-
-                    <div class="listing-slider__slide rounded--md bg-primary text-white px-4 pt-3 pb-5 listing mb-2 me-2 position-relative">
-                      <h5 class="listing__title">Title</h5>
-                      <button class="listing__favorite border-0 bg-transparent appearance-none" type="button" title="Favorite"></button>
-                     <div class="listing__rating"><i class="fas fa-star"></i> 5.0</div>
-                      <div class="listing__location w-100 position-absolute"><i class="fas fa-map-marker-alt"></i> Location</div>
-                    </div>
-
-                    <div class="listing-slider__slide rounded--md bg-primary text-white px-4 pt-3 pb-5 listing mb-2 me-2 position-relative">
-                      <h5 class="listing__title">Title</h5>
-                      <button class="listing__favorite border-0 bg-transparent appearance-none" type="button" title="Favorite"></button>
-                     <div class="listing__rating"><i class="fas fa-star"></i> 5.0</div>
-                      <div class="listing__location w-100 position-absolute"><i class="fas fa-map-marker-alt"></i> Location</div>
-                    </div>
 
                   </div>
 
                 </div>
-                <div class="tab-pane fade" id="pills-Popular" role="tabpanel" aria-labelledby="pills-Popular-tab">
-                  Popular
+                <div class="tab-pane fade" id="pills-Country" role="tabpanel" aria-labelledby="pills-Country-tab">
+                  Country
                 </div>
-                <div class="tab-pane fade" id="pills-Reccomendations" role="tabpanel" aria-labelledby="pills-contact-tab">
-                  Reccomendations
+                <div class="tab-pane fade" id="pills-Adventure" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  Adventure
                 </div>
               </div>
 
@@ -163,7 +143,6 @@
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
     <!--Slick Slider-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
